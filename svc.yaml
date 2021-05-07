@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: electrum-sv
+  namespace: test
+  labels:
+    app: geth
+spec:
+  ports:
+  - port: 7777
+    name: electrum-custom-rpc
+  clusterIP: 100.71.39.7
+  selector:
+    app: electrum-test
